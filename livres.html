@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listes | Livres</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">2NM </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="livres.html">livres</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1 class="text-center text-success">LISTES DES LIVRES BIBLIOTECHQUE</h1>
+      <table class="table" id="tableauId">
+        <thead>
+          <tr class="table-default">
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Nombre de Page</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button onClick="formClick()" class="btn btn-success w-100">
+        Ajouter
+      </button>
+      <form id="formLivres" action="" class="d-none">
+        <fieldset>
+          <legend class="text-center text-primary m-2">
+            Creation Element Livres
+          </legend>
+          <div class="form-group">
+            <label for="">Titre</label>
+            <input type="text" class="form-control" id="titre" />
+          </div>
+          <div class="form-group">
+            <label for="">Auteur</label>
+            <input type="text" class="form-control" id="auteur" />
+          </div>
+          <div class="form-group">
+            <label for="">Nombre de Page</label>
+            <input type="text" class="form-control" id="pages" />
+          </div>
+          <button class="btn btn-success mt-4" id="validationAjouterLivre">
+            Valider
+          </button>
+        </fieldset>
+      </form>
+      <form id="modifierLivre" action="" class="d-none">
+        <fieldset>
+          <legend class="text-center text-primary m-2">
+           Modification Livres
+          </legend>
+          <div class="form-group">
+            <label for="">Titre</label>
+            <input type="text" class="form-control" id="titre" />
+          </div>
+          <div class="form-group">
+            <label for="">Auteur</label>
+            <input type="text" class="form-control" id="auteur" />
+          </div>
+          <div class="form-group">
+            <label for="">Nombre de Page</label>
+            <input type="text" class="form-control" id="pages" />
+          </div>
+          <input type="hidden" id="indentifiant">
+          <button class="btn btn-success mt-4" id="validationModificationLivres">
+            Valider
+          </button>
+        </fieldset>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
